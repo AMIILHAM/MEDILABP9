@@ -1,0 +1,8 @@
+server:
+  port: 8083
+
+
+cors:
+  enabled: true
+  allowedAddress: ${ALLOWED_ADDRESS:http://localhost:4200,http://localhost:8080}
+

@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+
+cors:
+  enabled: true
+  allowedAddress: ${ALLOWED_ADDRESS:http://localhost:4200,http://localhost:8080,http://localhost:8083}
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: gestion_notes
+      uri: mongodb://localhost:27017/gestion_notes
