@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  gestion-patients:
+    build:
+      context: .
+      dockerfile: Dockerfile-gestion-patients
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-gestion-patients:3306/medilabo
+    depends_on:
+      - mysql-gestion-patients
+
+  gestion-notes:
+    build:
+      context: .
+      dockerfile: Dockerfile-gestion-notes
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mongodb-gestion-notes
+
+  gestion-risque:
+    build:
+      context: .
+      dockerfile: Dockerfile-gestion-risque
+    ports:
+      - "8083:8083"
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - gestion-patients
+      - gestion-notes
+      - gestion-risque
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    ports:
+      - "4200:4200"
+
+  mysql-gestion-patients:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /path/on/host/mysql-data:/var/lib/mysql
+
+  mongodb-gestion-notes:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - /path/on/host/mongo-data:/data/db
