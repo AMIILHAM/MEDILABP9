@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/backend/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/backend/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gestion-notes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gestion-notes/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gestion-patient/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gestion-patient/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/risque-analyse/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/risque-analyse/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
