@@ -1,6 +1,6 @@
 # Openclassrooms Project9 : MédiLabo Solutions
  #### MédiLabo Solutions est une application spring boot qui permettrait aux praticien/organisateurs :
- -De voir, mettre à jour, ajouter et supprimerr les informations personnelles des patients lorsqu'ils arrivent en rendez-vous. 
+ - De voir, mettre à jour, ajouter et supprimerr les informations personnelles des patients lorsqu'ils arrivent en rendez-vous. 
  -D'ajouter/consulter une note d'observation à l'historique du patient.
  -De générer/consulter le rapport de risque de  diabète de chaque patient afin de prévenir si sa santé est potentiellement en danger.
  ## Interfaces Web:
