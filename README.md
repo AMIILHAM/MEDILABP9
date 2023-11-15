@@ -20,9 +20,9 @@
  - Créer une base de données Mysql au nom : medilabo ,  port est 3306.
  - Créer une base de données Mongo DB au nom: gestion_notes ,port est 27017.
  - Depuis votre IDE exécutez : 
-   1- getway
-   2- gestion_patient
-   3- gestion_notes
-   4- risque_analyse
-   5- medilabosolutionsFrontend
+   1 getway
+   2 gestion_patient
+   3 gestion_notes
+   4 risque_analyse
+   5 medilabosolutionsFrontend
 - Pour démarrer l'application : http://localhost:4200/ 
