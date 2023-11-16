@@ -7,7 +7,7 @@
  ### Login:
  ### Home:
  ### Patient:
- ### profil parient:
+ ### profil parient ( notes - analyse de risque):
  
  ## Prerequisites: 
   
@@ -20,11 +20,11 @@
  - Créer une base de données Mysql au nom : medilabo ,  port est 3306.
  - Créer une base de données Mongo DB au nom: gestion_notes ,port est 27017.
  - Depuis votre IDE exécutez : 
-   1- getway
-   2-  gestion_patient
-   3-  gestion_notes
-   4-  risque_analyse
-   5-  medilabosolutionsFrontend
+   1-  gateway.
+   2-  gestion_patient. 
+   3-  gestion_notes.
+   4-  risque_analyse.
+   5-  medilabosolutionsFrontend.
 - Pour démarrer l'application : http://localhost:4200/
 ## Green Code :
   - L'objectif du green code c'est dechercher des moyens d'améliorer l'efficacité du code en identifiant et en éliminant les parties qui consomment inutilement des ressources,  afin d'avancer les pratiques pour un développement plus durable et plus responsable.​
