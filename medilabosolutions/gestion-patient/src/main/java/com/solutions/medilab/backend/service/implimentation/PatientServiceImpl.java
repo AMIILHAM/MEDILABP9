@@ -28,7 +28,11 @@ public class PatientServiceImpl implements PatientService {
     public Optional<Patient> getPatientById(Long id) {
         return this.patientRepository.findById(id);
     }
-
+    /**
+     * sauvegarder  un patientDto
+     *
+     * @param patientDto
+     */
     @Override
     public Patient save(PatientDto patientDto) {
         Patient patient = this.patientMapper.patientDtoToPatient(patientDto);

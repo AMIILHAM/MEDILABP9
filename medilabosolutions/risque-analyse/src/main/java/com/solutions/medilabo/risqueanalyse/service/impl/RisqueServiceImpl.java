@@ -20,7 +20,12 @@ public class RisqueServiceImpl implements RisqueService {
 
     private final NoteWebClient noteWebClient;
     private final PatientWebClient patientWebClient;
-
+    /**
+     * déterminer les niveaux de risque d'un patient
+     *
+     * @param idPatient - long
+     * @param authorizationHeader
+     */
     @Override
     public Risque analyseRisquePatient(String authorizationHeader, Long idPatient) {
 
@@ -54,11 +59,19 @@ public class RisqueServiceImpl implements RisqueService {
         return List.of("Hémoglobine A1C", "Microalbumine", "Taille", "Poids", "Fumeur", "Fumeuse", "Anormal",
                 "Cholestérol","Vertiges","Rechute","Réaction","Anticorps");
     }
-
+    /**
+     * déterminer si la note contient des mots declencheurs
+     *
+     * @param note
+     */
     private boolean hasOneOfKeywords(String note) {
         return this.declencheurs().stream().anyMatch(keyword -> note.toLowerCase().contains(keyword.toLowerCase()));
     }
-
+    /**
+     * compter  les mots declencheurs dans une note
+     *
+     * @param notes
+     */
     private int countKeywordsInAllNotes(List<Note> notes) {
         return notes.stream()
                 .mapToInt(note -> (int) declencheurs().stream()
@@ -67,7 +80,11 @@ public class RisqueServiceImpl implements RisqueService {
                 .sum();
     }
 
-
+    /**
+     * calculer l'age d'un patient
+     *
+     * @param patient
+     */
     private int getPatientAge(Patient patient) {
         LocalDate currentDate = LocalDate.now();
         if (patient.getDateNaissance() != null) {
