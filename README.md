@@ -5,10 +5,13 @@
  - De générer/consulter le rapport de risque de  diabète de chaque patient afin de prévenir si sa santé est potentiellement en danger.
  ## Interfaces Web:
  ### Login:
+ ![login](https://github.com/AMIILHAM/MEDILABP9/blob/master/medilabosolutions/docs/LOGIN.PNG)
  ### Home:
- (https://github.com/AMIILHAM/MEDILABP9/blob/master/HOME.PNG).
+![home](https://github.com/AMIILHAM/MEDILABP9/blob/master/medilabosolutions/docs/HOME.PNG)
  ### Patient:
- ### profil parient ( notes - analyse de risque):
+ ![patient](https://github.com/AMIILHAM/MEDILABP9/blob/master/medilabosolutions/docs/PATIENT.PNG)
+ ### profil patient details( notes - analyse de risque):
+ ![profil patient details](https://github.com/AMIILHAM/MEDILABP9/blob/master/medilabosolutions/docs/detail%20patient.PNG)
  
  ## Prerequisites: 
   
