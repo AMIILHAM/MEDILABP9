@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @RequestMapping("/risque")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = {"Authorization", "Origin"}, exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
 public class RisqueController {
 
     private final RisqueService risqueService;

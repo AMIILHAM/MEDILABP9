@@ -2,61 +2,80 @@ version: '3'
 
 services:
   gestion-patients:
+    image: gestion-patients
+    restart: always
     build:
-      context: .
-      dockerfile: Dockerfile-gestion-patients
+      context: ./gestion-patient
+      dockerfile: Dockerfile
+    networks:
+      - apimysql-net
     ports:
       - "8081:8081"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-gestion-patients:3306/medilabo
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-gestion-patients:3306/medilabo?allowPublicKeyRetrieval=true&useSSL=false
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     depends_on:
       - mysql-gestion-patients
-
+    volumes:
+      - .m2:/root/.m2
   gestion-notes:
+    image: gestion-notes
+    restart: always
     build:
-      context: .
-      dockerfile: Dockerfile-gestion-notes
+      context: ./gestion-notes
+      dockerfile: Dockerfile
     ports:
       - "8082:8082"
     depends_on:
       - mongodb-gestion-notes
-
   gestion-risque:
+    image: gestion-risque
+    restart: always
     build:
-      context: .
-      dockerfile: Dockerfile-gestion-risque
+      context: ./risque-analyse
+      dockerfile: Dockerfile
     ports:
       - "8083:8083"
-
   gateway:
+    image: gateway
+    restart: always
     build:
-      context: .
-      dockerfile: Dockerfile-gateway
+      context: ./gateway
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:
       - gestion-patients
       - gestion-notes
       - gestion-risque
-
   frontend:
+    image: frontend
     build:
-      context: .
-      dockerfile: Dockerfile-frontend
+      context: ./medilabosolutionsFrontend
+      dockerfile: Dockerfile
     ports:
       - "4200:4200"
-
   mysql-gestion-patients:
+    container_name: mysql-gestion-patients
+    restart: always
+    networks:
+      - apimysql-net
     image: mysql:latest
     environment:
-      MYSQL_DATABASE: root
+      MYSQL_DATABASE: medilabo
+      MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
     volumes:
       - /path/on/host/mysql-data:/var/lib/mysql
-
   mongodb-gestion-notes:
+    container_name: mongodb-gestion-notes
     image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
       - /path/on/host/mongo-data:/data/db
+networks:
+  apimysql-net:

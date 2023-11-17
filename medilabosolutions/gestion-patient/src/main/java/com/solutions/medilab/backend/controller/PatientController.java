@@ -11,9 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 @RestController @Slf4j
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = {"Authorization", "Origin"}, exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
 public class PatientController {
 
 

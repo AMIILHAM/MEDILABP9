@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class CustomGlobalFilter implements GlobalFilter, Ordered {
+
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         exchange.getResponse().getHeaders().add("Access-Control-Allow-Origin", "http://localhost:4200");

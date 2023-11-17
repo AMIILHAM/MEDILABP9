@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/notes/")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = {"Authorization", "Origin"}, exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
 public class NoteController {
 
     private final NoteRepository noteRepository;

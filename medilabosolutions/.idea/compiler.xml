@@ -33,7 +33,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="backend" target="11" />
       <module name="medilabo" target="11" />
       <module name="notes" target="11" />
     </bytecodeTargetLevel>

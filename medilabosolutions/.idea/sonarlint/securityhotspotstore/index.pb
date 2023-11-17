@@ -1,8 +1,6 @@
 
 |
 Lgateway/src/main/java/com/solutions/medilabo/gateway/GatewayApplication.java,a\5\a52d6ce6c9897d32437dead7d205b5b6e107a36f
-B
-gateway/Dockerfile,5\a\5a39717901490093530d8f039ae4bb7d57680f50
 @
 gateway/mvnw.cmd,2\b\2b83d90c1fa7d29755ba2aa43a61215a9bcc60c7
 ]
@@ -23,7 +21,3 @@ Qgateway/src/test/java/com/solutions/medilabo/gateway/GatewayApplicationTests.ja
 Pgateway/src/main/java/com/solutions/medilabo/gateway/gateway/BackendGateway.java,6\1\61891469f61fa0f65ec455a2368dc61dee050295
 [
 +gateway/src/main/resources/application.yaml,a\b\ab3c4bf349c6b3ab64efaca637a9b7aad2a29566
-Å
-Qgateway/src/main/java/com/solutions/medilabo/gateway/config/CorsGlobalFilter.java,4\3\43a062e369861cb379126c7ad43e315d1090cb62
-
-Ogateway/src/main/java/com/solutions/medilabo/gateway/config/SecurityConfig.java,3\8\38e722bb66e3e034bb25cf1bb2d5fc8308f52036
